@@ -1,0 +1,34 @@
+# ESP-IDF build artifacts
+build/
+*.elf
+*.bin
+*.map
+
+# IDF config files (can regenerate from defaults)
+sdkconfig.old
+sdkconfig
+sdkconfig.defaults
+
+# VSCode settings
+.vscode/
+*.code-workspace
+
+# Python virtual environments
+env/
+venv/
+*.pyc
+__pycache__/
+
+# CMake/Make temporary files
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+
+# Backup and log files
+*.swp
+*.swo
+*.bak
+*.tmp
+*.log
+
