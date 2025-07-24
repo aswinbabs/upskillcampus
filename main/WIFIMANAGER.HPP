@@ -19,8 +19,8 @@ private:
     static const int MAXIMUM_RETRY = 10;
     
     // WiFi Configuration
-    static constexpr const char* WIFI_SSID = "C-Net Sreedharan";
-    static constexpr const char* WIFI_PASSWORD = "sreedharan@32";
+    static constexpr const char* WIFI_SSID = "USER_ID";
+    static constexpr const char* WIFI_PASSWORD = "PASSWORD";
     
     WiFiManager();
     static void event_handler(void* arg, esp_event_base_t event_base, 

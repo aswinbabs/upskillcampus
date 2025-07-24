@@ -120,9 +120,7 @@ extern "C" void app_main(void)
         
         ESP_LOGI(TAG, "Published date: %s, time: %s after start-up", dateStr, timeStr);
 
-    // Main application loop (minimal - most work done in tasks and managers)
     while(1) {
-        // Optional: Periodic system health checks or other minimal operations
         vTaskDelay(pdMS_TO_TICKS(60000)); // Sleep for 1 minute
     }
 }

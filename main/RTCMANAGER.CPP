@@ -285,7 +285,6 @@ void RTCManager::rtc_monitor_task(void* param) {
 
             if (isInSchedule) {
                 if (!lightState) {
-                    //LightController::getInstance().turnOn();
                     // Wherever RTC is calling:
                     if (LightController::getInstance().requestTurnOn(LightController::RTC) == ESP_OK) {
                         ESP_LOGI(TAG, "🟢 Light turned ON (scheduled)");
@@ -294,11 +293,9 @@ void RTCManager::rtc_monitor_task(void* param) {
                     }
 
                     isLightOnFromSchedule = true;
-                   // ESP_LOGI(TAG, "🟢 Light turned ON (scheduled)");
                 }
             } else {
                 if (lightState && isLightOnFromSchedule) {
-                    //LightController::getInstance().turnOff();
                     if (LightController::getInstance().requestTurnOff(LightController::RTC) == ESP_OK) {
                         ESP_LOGI(TAG, "🔴 Light turned OFF (scheduled)");
                     } else {
@@ -306,7 +303,6 @@ void RTCManager::rtc_monitor_task(void* param) {
                     }
 
                     isLightOnFromSchedule = false;
-                    //ESP_LOGI(TAG, "⚫ Light turned OFF (scheduled)");
                 }
             }
         }
@@ -346,9 +342,6 @@ void RTCManager::resetMonitorTimestamps() {
     last_date_sent = 0;
     ESP_LOGI(TAG, "\u23F1\uFE0F RTC monitor timestamps reset");
 }
-
-
-///////////////////////
 
 void RTCManager::setSchedule(const struct tm& start, const struct tm& end) {
     schedule_start_time = start;

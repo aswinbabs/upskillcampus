@@ -9,7 +9,7 @@
 #include "freertos/queue.h"
 
 // MQTT Configuration
-#define MQTT_BROKER_URI             "mqtt://192.168.20.4:1883"
+#define MQTT_BROKER_URI             "mqtt://192.168.X.X:1883"
 #define CLIENT_ID                   "esp32_home_automation"
 
 // Topics

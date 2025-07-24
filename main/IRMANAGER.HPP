@@ -11,7 +11,7 @@
 class IRManager {
 private:
     static IRManager* instance;
-    static const gpio_num_t IR_PIN = GPIO_NUM_4;  // Adjust based on your wiring
+    static const gpio_num_t IR_PIN = GPIO_NUM_4;  
     IRManager();
 
 public:

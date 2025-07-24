@@ -316,7 +316,6 @@ void MQTTClient::processCommand(const char* command) {
  
     if (strcmp(command, "ON") == 0) {
     if (!LightController::getInstance().getState()) {
-        //LightController::getInstance().turnOn();
         LightController::getInstance().requestTurnOn(LightController::MANUAL);
         publishStatus("ON");
         ESP_LOGI(TAG, "🖐️ Manual command: Light turned ON");

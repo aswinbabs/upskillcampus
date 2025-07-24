@@ -14,8 +14,6 @@ IRManager* IRManager::instance = nullptr;
 static QueueHandle_t ir_evt_queue = nullptr;
 static TimerHandle_t ir_auto_off_timer = nullptr;
 
-#define IR_PIN GPIO_NUM_4  // Define your IR GPIO pin here
-
 IRManager::IRManager() {}
 
 IRManager& IRManager::getInstance() {
